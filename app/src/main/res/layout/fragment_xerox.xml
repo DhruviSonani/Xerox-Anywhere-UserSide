@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.XeroxFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Xerox Request"
+            android:padding="15dp"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:padding="25dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Page Number"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            <EditText
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_xerox_Manually"
+                android:hint="1-10,15-17 etc"
+                />
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Spiral"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rg_spiral_xerox"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_yes_xerox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"/>
+
+                <RadioButton
+                    android:id="@+id/rb_no_xerox"
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Side"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rg_side_xerox"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_one_xerox"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="One Side"/>
+
+                <RadioButton
+                    android:id="@+id/rb_two_xerox"
+                    android:text="Two Side"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:text="Type"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_color_xerox"
+                android:layout_width="wrap_content"
+                android:text="Color"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:background="@drawable/submit_button"
+                android:backgroundTint="#00B0FF"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btn_color_decrement_xerox"
+                android:layout_width="40dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+
+
+            <TextView
+                android:id="@+id/tv_color_xerox"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="0"
+                />
+            <Button
+                android:background="@drawable/submit_button"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#0277BD"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/btn_color_increment_xerox"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="+"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+
+                android:id="@+id/cb_bW_xerox"
+                android:layout_width="wrap_content"
+                android:text="B&amp;W"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:background="@drawable/submit_button"
+                android:backgroundTint="#00B0FF"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btn_bw_decrement_xerox"
+                android:layout_width="40dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+            <TextView
+                android:text="0"
+                android:textSize="18sp"
+                android:id="@+id/tv_bw_xerox"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+            <Button
+                android:background="@drawable/submit_button"
+                android:backgroundTint="#0277BD"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:id="@+id/btn_bw_increment_xerox"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="+"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:text="Note"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/et_NoteToSendXerox"
+                    android:hint="Optional"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/ly_xeroxButton"
+                android:layout_width="match_parent"
+                android:padding="15dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_xerox_manually"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/submit_button"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="Online payment"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_xerox_COD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/submit_button"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="15dp"
+                android:text="COD"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/ly_xeroxButton"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="92dp"
+                android:padding="15dp"
+                android:text="Use : When You want to send page number count, use this module and then go to shop to xerox your document there. Example : Page number (1-6,15-19 etc.) " />
+
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>
+

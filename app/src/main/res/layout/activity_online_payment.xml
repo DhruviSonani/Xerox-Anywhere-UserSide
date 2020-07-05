@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    tools:context=".Activity.OnlinePaymentActivity">
+
+    <TextView
+        android:id="@+id/et_MobileNUmber"
+
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+
+        android:id="@+id/et_amount"
+        android:padding="10dp"
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:background="@drawable/submit_button"
+        android:backgroundTint="@android:color/white"
+        android:padding="10dp"
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_payWithUpi"
+        android:text="Pay"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_payWithPaytm"
+        android:text="PayTm"
+        android:visibility="visible"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/submit_button"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_payWithRazerpay"
+        android:text="Razorpay"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/submit_button"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

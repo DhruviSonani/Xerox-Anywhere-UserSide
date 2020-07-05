@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_print"
+        android:icon="@drawable/ic_print"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_availableBook"
+        android:icon="@drawable/ic_open_book"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_xerox"
+        android:icon="@drawable/ic_xerox"
+        android:title="@string/title_notifications" />
+
+</menu>

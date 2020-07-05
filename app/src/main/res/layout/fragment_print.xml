@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/frame_print"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.PrintFragment">
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Send Your Attachment"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+        <ScrollView
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+
+                android:text="Number Of pages"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/et_NumofPages"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_attachment"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:text="Link Attachment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_setAttachmentPath"
+                android:layout_weight="0.70"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Set Your Path Here"
+                />
+        <ImageView
+        android:padding="5dp"
+        android:id="@+id/btn_attachment"
+        android:layout_weight="0.30"
+        app:srcCompat="@drawable/ic_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Spiral"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rg_spiral"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"/>
+
+                <RadioButton
+                    android:id="@+id/rb_no"
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Side"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rg_side"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_one"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="One Side"/>
+
+                <RadioButton
+                    android:id="@+id/rb_two"
+                    android:text="Two Side"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Bound"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rg_type_bind"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_hardbound"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"/>
+
+                <RadioButton
+                    android:id="@+id/rb_loose_bound"
+                    android:text="No"
+                    android:layout_weight="0.50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+            <LinearLayout
+            android:id="@+id/ll_spinner"
+                android:visibility="gone"
+                android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Bound type"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner_bound"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:text="Type"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_color"
+                android:layout_width="wrap_content"
+                android:text="Color"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:background="@drawable/submit_button"
+                android:backgroundTint="#00B0FF"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btn_color_decrement"
+                android:layout_width="40dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+
+
+            <TextView
+                android:id="@+id/tv_color"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="0"
+                />
+            <Button
+                android:background="@drawable/submit_button"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#0277BD"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/btn_color_increment"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="+"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+
+                android:id="@+id/cb_bW"
+                android:layout_width="wrap_content"
+                android:text="B&amp;W"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:background="@drawable/submit_button"
+                android:backgroundTint="#00B0FF"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btn_bw_decrement"
+                android:layout_width="40dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+            <TextView
+                android:text="0"
+                android:textSize="18sp"
+                android:id="@+id/tv_bw"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+            <Button
+                android:background="@drawable/submit_button"
+                android:backgroundTint="#0277BD"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:id="@+id/btn_bw_increment"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="+"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Page Size"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/cb_A4"
+                        android:text="A4"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <CheckBox
+                        android:id="@+id/cb_A3"
+                        android:text="A3"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="18sp"
+
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/cb_A2"
+                        android:text="A2"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_A1"
+                        android:text="A1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/cb_page"
+                        android:text="Normal Page"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+
+                    android:text="Note"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/et_NoteToSend"
+                    android:hint="Note if you wish to send shopkeeper (Optional)"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        </ScrollView>
+</RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rv_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_submit_print"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/submit_button"
+            android:layout_gravity="center_horizontal"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
